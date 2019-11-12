@@ -1,5 +1,17 @@
 # FrontEnd
 
+# npm install -g node@12.4.0
+# npm install -g @angular/cli@7.3.9
+# npm install node-modules
+# npm install --save @angular/material @angular/cdk
+# npm install --save @angular/animations
+
+
+
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
 ## Development server
