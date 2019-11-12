@@ -1,5 +1,4 @@
 import { AuthInterceptor } from './guard/auth.inspector';
-import { AuthGuard } from './guard/auth.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 //Declares our routing
@@ -83,7 +82,6 @@ import { LibrayServicesService } from './shared/dbAccess/libray-services.service
   ],
   providers: [
     LibrayServicesService,
-    AuthGuard,
     {
       provide :HTTP_INTERCEPTORS,
       useClass : AuthInterceptor,

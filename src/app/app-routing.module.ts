@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { AuthGuard } from './guard/auth.guard';
 import { Routes, RouterModule, CanActivate } from '@angular/router';
 
 /**
@@ -19,7 +18,6 @@ const routes: Routes = [
   {
     path : 'home', 
     loadChildren : './home/home.module#HomeModule',
-    canActivate: [AuthGuard]
   },
   //default component
   {
