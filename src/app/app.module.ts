@@ -33,7 +33,7 @@ import { MatCardModule } from '@angular/material/card';
 
 //Clock
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
-import { LibrayServicesService } from './shared/dbAccess/libray-services.service';
+import { LibrayServicesService } from './services/libray-services.service';
 
 
 

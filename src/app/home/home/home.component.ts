@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LibrayServicesService } from 'src/app/shared/dbAccess/libray-services.service';
+import { LibrayServicesService } from 'src/app/services/libray-services.service';
 
 @Component({
   selector: 'app-home',
