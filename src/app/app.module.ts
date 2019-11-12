@@ -1,4 +1,3 @@
-import { AuthInterceptor } from './guard/auth.inspector';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 //Declares our routing
@@ -34,13 +33,15 @@ import { MatCardModule } from '@angular/material/card';
 //Clock
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { LibrayServicesService } from './services/libray-services.service';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent
     
   ],
   imports: [
@@ -81,12 +82,8 @@ import { LibrayServicesService } from './services/libray-services.service';
    
   ],
   providers: [
-    LibrayServicesService,
-    {
-      provide :HTTP_INTERCEPTORS,
-      useClass : AuthInterceptor,
-      multi : true
-    }],
+    LibrayServicesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
