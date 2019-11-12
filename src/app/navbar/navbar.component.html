@@ -1,3 +1,43 @@
-<p>
-  navbar works!
-</p>
+<mat-drawer-container class="container" autosize >
+  <!-- Will be triggered by (click) = "drawer.toggle()" -->
+   
+  <div class="sidenav-content">
+      <mat-toolbar color="primary">
+          <mat-toolbar-row>
+              <!-- 
+                drawer.toggle(): will call #drawer and will bring the sidenav into view
+              -->
+              <button mat-icon-button (click) = "drawer.toggle()">
+                      <mat-icon>menu</mat-icon>
+              </button>
+              <button mat-button routerLink="/home">NYC Virtual Library</button>
+       
+              <span class="spacer"></span>
+              
+              <mat-menu #menu="matMenu" >
+                
+              </mat-menu>
+
+          </mat-toolbar-row>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+  </div>
+  
+  <mat-drawer #drawer class="sidenav">
+          <button mat-menu-item routerLink="/home">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+          </button> 
+
+          <button mat-menu-item (click)="about()">
+            <mat-icon>group</mat-icon>
+            <span>About</span>
+          </button> 
+
+          <button mat-menu-item (click)="api()">
+            <mat-icon>inbox</mat-icon>
+            <span>API</span>
+          </button>          
+  </mat-drawer>
+ 
+</mat-drawer-container>
