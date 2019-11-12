@@ -1,0 +1,18 @@
+FIRST CREATE A MODULE THAT WILL HOLD ALL COMPONENTS RELATED TO IT
+ng generate module orders --routing
+
+THEN CREATE COMPONENTS WITHIN THE MODULE
+ng generate component orders/orderlist --routing
+
+
+Rule of group work:
+    1)Before begin coding, checkout master.
+    2)pull master, to get the latest version
+    3)checkout your working branch 
+    4)merge your working branch with master
+    
+    5)you ready to add code to your branch
+    6)After you done, editing you push to your branch
+    7)checkout master
+    8)merge master with your edited branch
+    9)now you ready to push in master

@@ -1,0 +1,10 @@
+<!-- install node version == 12.11.1 -->
+node == 12.11.1
+<!-- install angular version == 7.3.9 -->
+angular/cli == 7.3.9
+<!-- install node_modules library -->
+node-modules
+<!-- install angualr materials -->
+# npm install --save @angular/material @angular/cdk
+<!-- install angualr animations -->
+angular/animations
