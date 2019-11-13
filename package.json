@@ -28,6 +28,8 @@
     "hammerjs": "^2.0.8",
     "ng-modules": "^3.0.5",
     "ng-pick-datetime": "^5.2.6",
+    "ng2-fileupload": "0.0.7",
+    "ngx-material-file-input": "^2.0.0",
     "node-modules": "^1.0.1",
     "node-sass": "^4.12.0",
     "rxjs": "^6.5.3",

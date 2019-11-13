@@ -34,7 +34,7 @@ import { MatCardModule } from '@angular/material/card';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { LibrayServicesService } from './services/libray-services.service';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { FileValidator } from 'ngx-material-file-input';
 
 
 
