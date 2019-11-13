@@ -5,6 +5,7 @@ import {
   HttpErrorResponse,
   HttpParams
 } from "@angular/common/http";
+import {RequestOptions} from '@angular/http';
 
 @Injectable({
   providedIn: "root"
@@ -32,8 +33,9 @@ export class LibrayServicesService {
 
   add_a_book(book_name: File) { // put request
     const formData: FormData = new FormData();
-    formData.append('file', book_name, book_name.name);
+    formData.append('file', book_name.name);
+    let requestOptions = new RequestOptions({ headers:null, 
+      withCredentials: true });
     console.log(this.rootUrl+"add", formData)
-    return this.http.post(this.rootUrl+"add", formData)
-  }
-}
+    return this.http.put("http://127.0.0.1:5000/"+"add", formData,{ headers:{'content-type': 'multipart/form-data','Access-Control-Allow-Origin': 'true' }} )}}
+    // 'Access-Control-Allow-Origin': true,'Content-Type': 'application/json; charset=utf-8',"X-Requested-With": "XMLHttpRequest"

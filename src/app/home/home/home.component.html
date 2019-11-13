@@ -28,3 +28,23 @@
 </div>
 
 
+<!-- <form #addTag = "ngForm" (ngSubmit) = "uploadFileToActivites(addTag.value)"> 
+  <input type = "file" name = "fileToUpload" placeholder = "upload file" ngModel> 
+  <br/> 
+  <input type = "submit" value = "submit"> 
+</form> -->
+
+<!-- <div class = "container">
+  <div class="uploadPic">
+      <input  type="file" class="hide_file" (change)="handleFileInput($event.target.files)">
+      <button mat-flat-button color="primary" >Upload File</button> 
+  </div>
+  <button class="uploadButton" mat-button color="primary" (click)="uploadFileToActivities()">submit</button>
+</div> -->
+
+
+<form #addBook = "ngForm" (ngSubmit) = "uploadFileToActivities(addBook.value)"> 
+  <input type = "file" name = "fileToUpload" placeholder = "Enter book name" ngModel> 
+  <br/> 
+  <input type = "submit" value = "submit"> 
+</form>

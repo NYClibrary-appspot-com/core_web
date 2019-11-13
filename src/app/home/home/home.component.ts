@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Inject } from "@angular/core";
 import { Router } from "@angular/router";
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormGroup, FormControl, FormsModule } from '@angular/forms';
 import { LibrayServicesService } from "src/app/services/libray-services.service";
 
@@ -9,19 +10,34 @@ import { LibrayServicesService } from "src/app/services/libray-services.service"
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  constructor(
-    private router: Router,
-    private libService: LibrayServicesService
-  ) {}
-  title = 'Angular 7 Project!'; 
+  //default variable for selected file.
+  fileToUpload: File = null;
   book_name; 
   formdata;
-  ngOnInit() { 
-    this.formdata = new FormGroup({ 
-       emailid: new FormControl("angular@gmail.com"),
 
-    });
+
+
+  constructor(
+    private router: Router,
+    private libService: LibrayServicesService,
+   ) {}
+
+
+
+  ngOnInit() { 
+    this.formdata = new FormGroup({});
   }
+
+  handleFileInput(files: FileList) {
+    this.fileToUpload = files.item(0);
+}
+
+uploadFileToActivities(file : any){
+    console.log(typeof file)
+    this.libService.add_a_book(file).subscribe((data: any) => {
+      console.log(data);
+    })
+    ;}
 
   test() {
     this.libService.welcomeMessage().subscribe((data: any) => {
@@ -29,10 +45,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-
-  onClickSubmit(data) {
-    alert("Entered Email id : " + data.emailid); 
- }
+  
 
 
   bookList() {
@@ -51,9 +64,12 @@ export class HomeComponent implements OnInit {
 
 
   addBook(book_name: File) {
-    this.libService.add_a_book(book_name).subscribe((data: any) => {
-      console.log(data);
-    });
+    // this.libService.add_a_book(book_name).subscribe((data: any) => {
+    //   console.log(data);
+    // });
     this.router.navigate(["/home"]);
   }
+
+
+
 }
