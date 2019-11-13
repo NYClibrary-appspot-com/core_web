@@ -14,7 +14,7 @@ export class LibrayServicesService {
     throw new Error("Method not implemented.");
   }
 
-  readonly rootUrl = "http://127.0.0.1:5000/";
+  readonly rootUrl = "https://back-end-258822.appspot.com/";
   constructor(private http: HttpClient) {}
 
   welcomeMessage() {
