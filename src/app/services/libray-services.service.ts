@@ -14,12 +14,14 @@ export class LibrayServicesService {
     throw new Error("Method not implemented.");
   }
 
-  readonly rootUrl = "https://back-end-258822.appspot.com";
+  readonly rootUrl = "http://127.0.0.1:5000/";
   constructor(private http: HttpClient) {}
 
   welcomeMessage() {
     // get request
-    return this.http.get(this.rootUrl);
+    //return this.http.get(this.rootUrl);
+    const response = this.http.get(this.rootUrl, { responseType: "text" });
+    return response;
   }
 
   get_booklist() {
