@@ -2,13 +2,25 @@
   home works!
 </p>
 
+
+
+<form #bookTag = "ngForm" (ngSubmit) = "searchBook(bookTag.value)"> 
+  <input type = "text" name = "book_name" placeholder = "Enter book name" ngModel> 
+  <br/> 
+  <input type = "submit" value = "submit"> 
+</form>
+
 <!-- 
    <mat-tab-group [selectedIndex] = "selected.value" 
                   (selectedIndexChange) ="currentTab($event)" mat-align-tabs="center">
 
 
    </mat-tab-group> ///
+
 -->
+
+<a mat-fab color="primary" (click)="bookList()" style="margin-right: 14px">bookList</a>
+
 <div>
   <a mat-fab color="primary" (click)="test()" style="margin-right: 14px">
     <mat-icon>add</mat-icon>

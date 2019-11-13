@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { FormGroup, FormControl, FormsModule } from '@angular/forms';
 import { LibrayServicesService } from "src/app/services/libray-services.service";
 
 @Component({
@@ -12,8 +13,15 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private libService: LibrayServicesService
   ) {}
+  title = 'Angular 7 Project!'; 
+  book_name; 
+  formdata;
+  ngOnInit() { 
+    this.formdata = new FormGroup({ 
+       emailid: new FormControl("angular@gmail.com"),
 
-  ngOnInit() {}
+    });
+  }
 
   test() {
     this.libService.welcomeMessage().subscribe((data: any) => {
@@ -21,11 +29,31 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  addBook() {
-    this.router.navigate(["/home/addBook"]);
-  }
+
+  onClickSubmit(data) {
+    alert("Entered Email id : " + data.emailid); 
+ }
+
 
   bookList() {
-    this.router.navigate(["/home/bookList"]);
+    this.libService.get_booklist().subscribe((data: any) => {
+      console.log(data);
+    });
+  }
+
+  searchBook(book_name: string){
+    this.libService.search_a_book(Object(book_name)["book_name"]).subscribe((data: any) => {
+      console.log(data);
+    });
+
+  }
+
+
+
+  addBook(book_name: File) {
+    this.libService.add_a_book(book_name).subscribe((data: any) => {
+      console.log(data);
+    });
+    this.router.navigate(["/home"]);
   }
 }

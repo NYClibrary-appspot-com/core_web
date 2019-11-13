@@ -18,24 +18,22 @@ export class LibrayServicesService {
   constructor(private http: HttpClient) {}
 
   welcomeMessage() {
-    // get request
-    //return this.http.get(this.rootUrl);
     const response = this.http.get(this.rootUrl, { responseType: "text" });
     return response;
   }
 
-  get_booklist() {
-    // get request
+  get_booklist() { // get request
     return this.http.get(this.rootUrl + "book_list");
   }
 
-  search_a_book(book_name: string) {
-    //get request
-    return null;
+  search_a_book(book_name: string) { //get request
+    return this.http.get(this.rootUrl + "search?book_name="+book_name);
   }
 
-  add_a_book(book_name: string) {
-    //post request
-    return null;
+  add_a_book(book_name: File) { // put request
+    const formData: FormData = new FormData();
+    formData.append('file', book_name, book_name.name);
+    console.log(this.rootUrl+"add", formData)
+    return this.http.post(this.rootUrl+"add", formData)
   }
 }

@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { AddBookComponent } from './add-book/add-book.component';
 import { BookListComponent } from './book-list/book-list.component';
-
+import { FormsModule }   from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +25,8 @@ import { BookListComponent } from './book-list/book-list.component';
     MatCardModule,
     MatIconModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule 
     
   ]
 })
