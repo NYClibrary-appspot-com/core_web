@@ -1,24 +1,10 @@
-<p>
-  home works!
-</p>
-
-<form #bookTag = "ngForm" (ngSubmit) = "searchBook(bookTag.value)"> 
-  <input type = "text" name = "book_name" placeholder = "Enter book name" ngModel> 
-  <br/> 
-  <input type = "submit" value = "submit"> 
-</form>
-
-<!-- 
-   <mat-tab-group [selectedIndex] = "selected.value" 
-                  (selectedIndexChange) ="currentTab($event)" mat-align-tabs="center">
-   </mat-tab-group> ///
--->
 <div>
-<a mat-fab color="primary" (click)="bookList()" style="margin-right: 14px">bookList</a>
-</div>
-
-<div>
-  <a mat-fab color="primary" (click)="test()" style="margin-right: 14px">welcome</a>
+  <a mat-fab color="primary" (click)="bookList()" style="margin-left: 600px"
+    >bookList</a
+  >
+  <a mat-fab color="primary" (click)="test()" style="margin-left: 200px"
+    >welcome</a
+  >
 </div>
 
 <div class="add-book-button">
@@ -27,6 +13,17 @@
   </a>
 </div>
 
+<form #bookTag="ngForm" (ngSubmit)="searchBook(bookTag.value)">
+  <input type="text" name="book_name" placeholder="Enter book name" ngModel />
+  <input id="bookSearchButton" class="mybutton" type="submit" value="submit" />
+  <br />
+</form>
+
+<!-- 
+   <mat-tab-group [selectedIndex] = "selected.value" 
+                  (selectedIndexChange) ="currentTab($event)" mat-align-tabs="center">
+   </mat-tab-group> ///
+-->
 
 <!-- <form #addTag = "ngForm" (ngSubmit) = "uploadFileToActivites(addTag.value)"> 
   <input type = "file" name = "fileToUpload" placeholder = "upload file" ngModel> 
@@ -42,9 +39,22 @@
   <button class="uploadButton" mat-button color="primary" (click)="uploadFileToActivities()">submit</button>
 </div> -->
 
-
-<form #addBook = "ngForm" (ngSubmit) = "uploadFileToActivities(addBook.value)"> 
-  <input type = "file" name = "fileToUpload" placeholder = "Enter book name" ngModel> 
-  <br/> 
-  <input type = "submit" value = "submit"> 
+<form #addBook="ngForm" (ngSubmit)="uploadFileToActivities(addBook.value)">
+  <input
+    id="uploadfile"
+    type="file"
+    name="fileToUpload"
+    placeholder="Enter book name"
+    ngModel
+  />
+  <input id="uploadBookButton" class="mybutton" type="submit" value="upload" />
+  <br />
 </form>
+
+<div>
+  <!-- <img src="assets/homebg.jpg" /> -->
+</div>
+
+<picture>
+  <img src="assets/homebg.jpg" style="object-fit: cover;" loading="lazy" />
+</picture>
