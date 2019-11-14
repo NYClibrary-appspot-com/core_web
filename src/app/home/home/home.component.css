@@ -87,3 +87,7 @@ input[type="submit"] {
   cursor: pointer;
   margin-left: 10%;
 }
+
+body {
+  background: url("/assets/img/homegb.jpg") no-repeat center center fixed;
+}
