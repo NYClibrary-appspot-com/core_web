@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   fileToUpload:   File      = null;
   book_name   :   string    = null;
   book_list   :   []        = null;
-  welcome     :   {}        = null;
+  welcome     :   string    = null;
   formdata    :   FormGroup = null; 
   upload_mess :   string    = null;
 
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   // welcome message from server
   welocome() {
     this.libService.welcomeMessage().subscribe((data: any) => {
-      this.welcome = data;
+      this.welcome = data.success;
       console.log(this.welcome);
     });
   }
