@@ -26,14 +26,17 @@ export class HomeComponent implements OnInit {
 
   handleFileInput(files: FileList) {
     this.fileToUpload = files.item(0);
+    }
+
+  uploadFileToActivity(file: any) {
+    this.libService.add_a_book(this.fileToUpload).subscribe((data: any)=>{
+      console.log(data)
+    })
+    
+  
   }
 
-  uploadFileToActivities(file: any) {
-    console.log(typeof file);
-    this.libService.add_a_book(file).subscribe((data: any) => {
-      console.log(data);
-    });
-  }
+ 
 
   test() {
     this.libService.welcomeMessage().subscribe((data: any) => {
@@ -55,10 +58,5 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  addBook(book_name: File) {
-    // this.libService.add_a_book(book_name).subscribe((data: any) => {
-    //   console.log(data);
-    // });
-    this.router.navigate(["/home"]);
-  }
+
 }
