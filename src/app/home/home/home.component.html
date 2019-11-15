@@ -1,11 +1,9 @@
 <div>
-  <a mat-fab color="primary" (click)="bookList()" style="margin-left: 600px"
-    >bookList</a
-  >
-  <a mat-fab color="primary" (click)="test()" style="margin-left: 200px"
-    >welcome</a
-  >
+  <a mat-fab color="primary" (click)="bookList()" style="margin-left: 600px">bookList</a>
+  <a mat-fab color="primary" (click)="welocome()" style="margin-left: 200px">welcome</a>
 </div>
+
+
 
 <div class="add-book-button">
   <a mat-fab color="primary" (click)="addBook()" style="margin-right: 14px">
@@ -13,11 +11,15 @@
   </a>
 </div>
 
+
+
 <form #bookTag="ngForm" (ngSubmit)="searchBook(bookTag.value)">
   <input type="text" name="book_name" placeholder="Enter book name" ngModel />
   <input id="bookSearchButton" class="mybutton" type="submit" value="submit" />
   <br />
 </form>
+
+
 
 
 <div class = "container">
