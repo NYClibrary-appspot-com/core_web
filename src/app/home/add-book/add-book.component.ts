@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { FormGroup } from '@angular/forms';
 import { LibrayServicesService } from 'src/app/services/libray-services.service';
