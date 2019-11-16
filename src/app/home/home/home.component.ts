@@ -1,6 +1,6 @@
 import { Router } from "@angular/router";
-import { FormGroup} from "@angular/forms";
-import { Component, OnInit} from "@angular/core";
+import { FormGroup } from "@angular/forms";
+import { Component, OnInit } from "@angular/core";
 import { LibrayServicesService } from "src/app/services/libray-services.service";
 
 @Component({
@@ -10,17 +10,20 @@ import { LibrayServicesService } from "src/app/services/libray-services.service"
 })
 export class HomeComponent implements OnInit {
   //default variables .
-  fileToUpload:   File      = null;
-  book_name   :   string    = null;
-  book_list   :   []        = null;
-  welcome     :   {}        = null;
-  formdata    :   FormGroup = null; 
-  upload_mess :   string    = null;
+  fileToUpload: File = null;
+  book_name: string = null;
+  book_list: [] = null;
+  list: [] = null;
+  welcome: {} = null;
+  formdata: FormGroup = null;
+  upload_mess: string = null;
 
-  constructor(private router: Router,private libService: LibrayServicesService) {
-  }
+  constructor(
+    private router: Router,
+    private libService: LibrayServicesService
+  ) {}
 
-  ngOnInit() { 
+  ngOnInit() {
     this.formdata = new FormGroup({});
   }
 
@@ -32,15 +35,13 @@ export class HomeComponent implements OnInit {
     });
   }
 
-
   // find all the books of library
-  bookList(){
+  bookList() {
     this.libService.get_booklist().subscribe((data: any) => {
       this.book_list = data;
       console.log(this.book_list);
     });
   }
-
 
   // search a book by book name
   searchBook(book_name: string) {
@@ -52,20 +53,21 @@ export class HomeComponent implements OnInit {
       });
   }
 
-
   // take the file from file list
   handleFileInput(files: FileList) {
     this.fileToUpload = files.item(0);
   }
 
-
   // upload the retrived file from file list
   uploadFileToActivity(file: any) {
-    this.libService.add_a_book(this.fileToUpload).subscribe((data: any)=>{
+    this.libService.add_a_book(this.fileToUpload).subscribe((data: any) => {
       this.upload_mess = data.success;
       console.log(this.upload_mess);
-    })
+    });
   }
 
-
+  get_book_list() {
+    this.list = this.book_list;
+    return this.list;
+  }
 }

@@ -1,9 +1,12 @@
 <div>
-  <a mat-fab color="primary" (click)="bookList()" style="margin-left: 600px">bookList</a>
-  <a mat-fab color="primary" (click)="welocome()" style="margin-left: 200px">welcome</a>
+  <a mat-fab color="primary" (click)="bookList()" style="margin-left: 600px"
+    >bookList
+  </a>
+
+  <a mat-fab color="primary" (click)="welocome()" style="margin-left: 200px"
+    >welcome</a
+  >
 </div>
-
-
 
 <div class="add-book-button">
   <a mat-fab color="primary" (click)="addBook()" style="margin-right: 14px">
@@ -11,22 +14,32 @@
   </a>
 </div>
 
-
-
 <form #bookTag="ngForm" (ngSubmit)="searchBook(bookTag.value)">
   <input type="text" name="book_name" placeholder="Enter book name" ngModel />
   <input id="bookSearchButton" class="mybutton" type="submit" value="submit" />
   <br />
 </form>
 
-
-
-
-<div class = "container">
+<div class="container">
   <div class="uploadPic">
-      <input  type="file" class="hide_file" (change)="handleFileInput($event.target.files)">
-      <button mat-flat-button color="primary" >Upload File</button> 
+    <input
+      type="file"
+      class="hide_file"
+      (change)="handleFileInput($event.target.files)"
+    />
+    <button mat-flat-button color="primary">Upload File</button>
   </div>
-  <button class="uploadButton" mat-button color="primary" (click)="uploadFileToActivity()">submit</button>
+  <button
+    class="uploadButton"
+    mat-button
+    color="primary"
+    (click)="uploadFileToActivity()"
+  >
+    submit
+  </button>
 </div>
-
+<ul>
+  <li *ngFor="let book of get_book_list(); let i = index">
+    {{ i + 1 }} - {{ book }}
+  </li>
+</ul>
