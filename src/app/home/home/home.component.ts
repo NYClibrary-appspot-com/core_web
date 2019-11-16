@@ -40,9 +40,10 @@ export class HomeComponent implements OnInit {
 
   // search a book by book name
   searchBook(book_name: string) {
-
+    console.log(book_name)
     if(book_name != null){
       this.libService.search_a_book(book_name).subscribe((data: any)=>{
+        console.log(data.book_name)
         this.book_name = data.book_name;
         console.log(this.book_name);
       });
