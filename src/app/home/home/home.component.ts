@@ -10,18 +10,14 @@ import { LibrayServicesService } from "src/app/services/libray-services.service"
 })
 export class HomeComponent implements OnInit {
   //default variables .
-  fileToUpload:   File      = null;
   book_name   :   string    = null;
   book_list   :   []        = null;
   welcome     :   string    = null;
-  formdata    :   FormGroup = null; 
-  upload_mess :   string    = null;
 
   constructor(private router: Router,private libService: LibrayServicesService) {
   }
 
   ngOnInit() { 
-    this.formdata = new FormGroup({});
   }
 
   // welcome message from server
@@ -44,27 +40,23 @@ export class HomeComponent implements OnInit {
 
   // search a book by book name
   searchBook(book_name: string) {
-    this.libService
-      .search_a_book(Object(book_name)["book_name"])
-      .subscribe((data: any) => {
+
+    if(book_name != null){
+      this.libService.search_a_book(book_name).subscribe((data: any)=>{
         this.book_name = data.book_name;
         console.log(this.book_name);
       });
+    }
+    else{
+      console.log("null value is not exceptable")
+    }
+    
   }
 
 
-  // take the file from file list
-  handleFileInput(files: FileList) {
-    this.fileToUpload = files.item(0);
-  }
 
-
-  // upload the retrived file from file list
-  uploadFileToActivity(file: any) {
-    this.libService.add_a_book(this.fileToUpload).subscribe((data: any)=>{
-      this.upload_mess = data.success;
-      console.log(this.upload_mess);
-    })
+  addBook(){
+    this.router.navigate(['/home/addBook']);
   }
 
 

@@ -1,7 +1,19 @@
 <div>
+
+  <form #bookTag="ngForm" (ngSubmit)="searchBook(bookTag.value)">
+    <input type="text" name="book_name" placeholder="Enter book name" ngModel />
+    <input id="bookSearchButton" class="mybutton" type="submit" value="submit" />
+    <br />
+  </form>
+
+</div>
+
+
+
+<div>
   <a mat-fab color="primary" (click)="bookList()" style="margin-left: 600px">bookList</a><br/>
   <!-- <a mat-fab color="primary" (click)="welocome()" style="margin-left: 200px">welcome</a> -->
-  <a>If you click the bookList button, I will display all books: </a>
+  <p>If you click the bookList button, I will display all books: </p>
   <p> {{book_list[0]}}</p>
   <p> {{book_list[1]}}</p>
   <p> {{book_list[2]}}</p>
@@ -20,21 +32,8 @@
 
 
 
-<form #bookTag="ngForm" (ngSubmit)="searchBook(bookTag.value)">
-  <input type="text" name="book_name" placeholder="Enter book name" ngModel />
-  <input id="bookSearchButton" class="mybutton" type="submit" value="submit" />
-  <br />
-</form>
 
 
 
 
-
-<div class = "container">
-  <div class="uploadPic">
-      <input  type="file" class="hide_file" (change)="handleFileInput($event.target.files)">
-      <button mat-flat-button color="primary" >Upload File</button> 
-  </div>
-  <button class="uploadButton" mat-button color="primary" (click)="uploadFileToActivity()">submit</button>
-</div>
 
