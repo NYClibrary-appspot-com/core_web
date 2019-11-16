@@ -8,6 +8,13 @@ p {
   margin-bottom: 30px;
 }
 
+.main-div{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .add-book-button {
   z-index: 5;
   position: fixed;

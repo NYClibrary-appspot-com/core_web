@@ -10,11 +10,8 @@
 
 
 
-<div>
-  <a mat-fab color="primary" (click)="bookList()" style="margin-left: 600px">bookList</a><br/>
-  <!-- <a mat-fab color="primary" (click)="welocome()" style="margin-left: 200px">welcome</a> -->
-  <p>If you click the bookList button, I will display all books: </p>
 
+  <p>Some available books of our library: </p>
   <div *ngIf="book_list != null">
       <!-- use a for loop here to display all books
      -->
@@ -26,7 +23,6 @@
        
   </div>
   
-</div>
 
 
 

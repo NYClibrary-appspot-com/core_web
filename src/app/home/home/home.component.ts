@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() { 
+    this.bookList()
   }
 
   // welcome message from server
