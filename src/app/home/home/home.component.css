@@ -8,11 +8,10 @@ p {
   margin-bottom: 30px;
 }
 
-.main-div{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.mat-card-cvr{ 
+  top:50%; 
+  width:100%; text-align:center; 
+  position:fixed; 
 }
 
 .add-book-button {

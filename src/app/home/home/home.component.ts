@@ -38,6 +38,12 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  
+  download_a_book(){
+    this.libService.download_a_book("FALL2019.PNG").subscribe((data:any)=>{
+      console.log(data);
+    })
+  }
 
   // search a book by book name
   searchBook(book_name: string) {
