@@ -18,7 +18,7 @@ export class LibrayServicesService {
   }
 
   search_a_book(book_name: string) { //get request
-    return this.http.get(this.rootUrl + "search?book_name="+book_name);
+    return this.http.get(this.rootUrl + "search?book_name="+book_name['book_name']);
   }
 
   download_a_book(book_name: string) { //get request

@@ -32,18 +32,17 @@ export class AddBookComponent implements OnInit {
 
 
   // upload the retrived file from file list and routes back to home
-  uploadFileToActivity(file: any) {
+  uploadFileToActivity() {
 
-    if(file != null){
+    if(this.fileToUpload != null){
         this.libService.add_a_book(this.fileToUpload).subscribe((data: any)=>{
-          // this.upload_mess = data.success;
-          // console.log(this.upload_mess);
-          console.log(data)
+          this.upload_mess = data.success;
+          alert(this.upload_mess);  
         })
         this.router.navigate(['/home']);
     }
     else{
-      console.log("null value is not exceptable")
+      alert("null value is not exceptable")
       this.router.navigate(['/home']);
     }
   }
