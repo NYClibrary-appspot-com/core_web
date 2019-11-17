@@ -22,7 +22,8 @@ export class LibrayServicesService {
   }
 
   download_a_book(book_name: string) { //get request
-    return this.http.get("http://127.0.0.2:5000/" + "download_book?book_name="+book_name);
+                        //"http://127.0.0.1:5000/"
+    return this.http.get(this.rootUrl + "download_book?book_name="+book_name);
   }
 
   add_a_book(fileToUpload : File) { // post request
