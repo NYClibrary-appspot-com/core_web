@@ -1,4 +1,3 @@
-import { async } from '@angular/core/testing';
 import { Injectable } from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 
