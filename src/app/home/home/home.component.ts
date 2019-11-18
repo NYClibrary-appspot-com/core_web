@@ -1,8 +1,6 @@
 import { Router } from "@angular/router";
 import { FormGroup} from "@angular/forms";
-import * as fileSaver from 'file-saver';
 import { Component, OnInit} from "@angular/core";
-import {Storage} from "@google-cloud/storage";
 import { LibrayServicesService } from "src/app/services/libray-services.service";
 
 @Component({
@@ -12,6 +10,7 @@ import { LibrayServicesService } from "src/app/services/libray-services.service"
 })
 export class HomeComponent implements OnInit {
   //default variables .
+  searched_b  :   []        = null;
   book_name   :   string    = null;
   book_list   :   []        = null;
   welcome     :   string    = null;
@@ -42,35 +41,13 @@ export class HomeComponent implements OnInit {
 
 
   download_a_book(){
-
-      // projectId = 'project-id';
-      // keyFilename = '/path/to/keyfile.json'
-      // storage = new Storage(this.projectId , this.keyFilename);
-
-      // // Makes an authenticated API request.
-      // try {
-      //   const [buckets] = this.storage.getBuckets();
-
-      //   console.log('Buckets:');
-      //   buckets.forEach(bucket => {
-      //     console.log(bucket.name);
-      //   });
-      // } catch (err) {
-      //   console.error('ERROR:', err);
-      // }
-    
-
-    this.libService.download_a_book("FALL2019.PNG").subscribe((data:any)=>{
-      // console.log(typeof data.book)
-      // window.location.href = data.book;
-      // console.log(window.location.href)
-      // console.log(fileSaver.saveAs(data.book))
-      
-    })
+    this.libService.download_a_book("FALL2019.PNG").subscribe((data: any)=>{
+          console.log(data)
+      })
   }
 
   // search a book by book name
-  searchBook(book_name: string) {
+  searchBook(book_name: string) {   
     if(book_name != null){
       this.libService.search_a_book(book_name).subscribe((data: any)=>{
         // console.log(data);
@@ -78,7 +55,14 @@ export class HomeComponent implements OnInit {
           alert(data.error)
         }
         else{
-          this.book_name = data.book_name;
+          if(data.success){  // it will be implemented, if user search with actual book_name
+            this.book_name = data;
+            console.log(this.book_name)
+          }
+          else{  // it will be implemented, if user search with pre-fix of book_name
+            this.searched_b = data;
+            console.log(this.searched_b)
+          }
         }
       });
     }
