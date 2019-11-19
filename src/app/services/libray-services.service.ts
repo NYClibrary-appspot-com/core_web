@@ -8,8 +8,8 @@ import {HttpClient} from "@angular/common/http";
 export class LibrayServicesService { 
   
                     // "https://back-end-258822.appspot.com/"
-                    // "https://avian-brand-259321.appspot.com/"
-  readonly rootUrl = "https://pyback.appspot.com/";
+                    // "https://pyback.appspot.com/"
+  readonly rootUrl = "https://back-end-258822.appspot.com/";
   constructor(private http: HttpClient) {}
 
   welcomeMessage() {  // get request
@@ -26,7 +26,7 @@ export class LibrayServicesService {
 
   download_a_book(book_name: string) { //get request
     ///download_book?book_name=FALL2019.PNG
-    return this.http.get(this.rootUrl + "download_book?book_name="+book_name);
+    return this.http.get("http://127.0.0.1:5000/download_book?book_name=FALL2019.PNG",{ responseType: "blob" });
   }
 
   add_a_book(fileToUpload : File) { // post request

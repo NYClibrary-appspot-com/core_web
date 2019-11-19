@@ -43,6 +43,9 @@ export class HomeComponent implements OnInit {
   download_a_book(){
     this.libService.download_a_book("FALL2019.PNG").subscribe((data: any)=>{
           console.log(data)
+          // let blob = new Blob([data]);
+          // let url = window.URL.createObjectURL(blob);
+          // let pwa = window.open(url);
       })
   }
 
