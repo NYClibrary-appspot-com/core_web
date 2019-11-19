@@ -12,9 +12,6 @@ export class LibrayServicesService {
   readonly rootUrl = "https://back-end-258822.appspot.com/";
   constructor(private http: HttpClient) {}
 
-  welcomeMessage() {  // get request
-    return this.http.get(this.rootUrl, { responseType: "text" });
-  }
 
   get_booklist() { // get request
     return this.http.get(this.rootUrl + "book_list");

@@ -1,3 +1,4 @@
+import { loadBalancer } from './proxy/loadBalancer';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 //Declares our routing
@@ -82,7 +83,14 @@ import { FileValidator } from 'ngx-material-file-input';
    
   ],
   providers: [
-    LibrayServicesService
+    LibrayServicesService,
+    
+      {
+        provide :HTTP_INTERCEPTORS,
+        useClass : loadBalancer,
+        multi : true
+      }
+    
   ],
   bootstrap: [AppComponent]
 })

@@ -22,14 +22,6 @@ export class HomeComponent implements OnInit {
     this.bookList()
   }
 
-  // welcome message from server
-  welocome() {
-    this.libService.welcomeMessage().subscribe((data: any) => {
-      this.welcome = data.success;
-      console.log(this.welcome);
-    });
-  }
-
 
   // find all the books of library
   bookList(){
