@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.formdata = new FormGroup({});
+    this.bookList();
   }
 
   // welcome message from server
@@ -66,8 +67,12 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  get_book_list() {
-    this.list = this.book_list;
-    return this.list;
+  addBook() {
+    this.router.navigate(["/home/addBook"]);
   }
+
+  // get_book_list() {
+  //   this.list = this.book_list;
+  //   return this.list;
+  // }
 }

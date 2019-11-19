@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <a mat-fab color="primary" (click)="bookList()" style="margin-left: 600px"
     >bookList
   </a>
@@ -6,7 +6,7 @@
   <a mat-fab color="primary" (click)="welocome()" style="margin-left: 200px"
     >welcome</a
   >
-</div>
+</div> -->
 
 <div class="add-book-button">
   <a mat-fab color="primary" (click)="addBook()" style="margin-right: 14px">
@@ -20,7 +20,7 @@
   <br />
 </form>
 
-<div class="container">
+<!-- <div class="container">
   <div class="uploadPic">
     <input
       type="file"
@@ -37,9 +37,24 @@
   >
     submit
   </button>
+</div> -->
+
+<br />
+<table>
+  <ul>
+    <tr>
+      <th>Book/s name</th>
+    </tr>
+
+    <li *ngFor="let book of book_list | slice: 0:5; let i = index">
+      <tr>
+        <th>{{ i + 1 }} - {{ book }}</th>
+      </tr>
+    </li>
+  </ul>
+</table>
+<div class="add-book-button">
+  <a mat-fab color="primary" (click)="addBook()" style="margin-right: 14px">
+    <mat-icon>add</mat-icon>
+  </a>
 </div>
-<ul>
-  <li *ngFor="let book of get_book_list(); let i = index">
-    {{ i + 1 }} - {{ book }}
-  </li>
-</ul>
