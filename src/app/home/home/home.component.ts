@@ -29,12 +29,12 @@ export class HomeComponent implements OnInit {
   }
 
   // welcome message from server
-  welocome() {
-    this.libService.welcomeMessage().subscribe((data: any) => {
-      this.welcome = data;
-      console.log(this.welcome);
-    });
-  }
+  // welocome() {
+  //   this.libService.welcomeMessage().subscribe((data: any) => {
+  //     this.welcome = data;
+  //     console.log(this.welcome);
+  //   });
+  // }
 
   // find all the books of library
   bookList() {
