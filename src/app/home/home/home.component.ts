@@ -2,6 +2,7 @@ import { Router } from "@angular/router";
 import { FormGroup} from "@angular/forms";
 import { Component, OnInit} from "@angular/core";
 import { LibrayServicesService } from "src/app/services/libray-services.service";
+import { saveAs } from 'file-saver'
 
 @Component({
   selector: "app-home",
@@ -31,13 +32,10 @@ export class HomeComponent implements OnInit {
     });
   }
 
-
-  download_a_book(){
-    this.libService.download_a_book("FALL2019.PNG").subscribe((data: any)=>{
-          console.log(data)
-          // let blob = new Blob([data]);
-          // let url = window.URL.createObjectURL(blob);
-          // let pwa = window.open(url);
+  download_a_book(book_name : string){
+    console.log(book_name)
+    this.libService.download_a_book(book_name).subscribe((data: any)=>{
+        saveAs(new File( [data], 'FALL2019.PNG'))
       })
   }
 

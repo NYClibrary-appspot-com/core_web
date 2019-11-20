@@ -22,8 +22,7 @@ export class LibrayServicesService {
   }
 
   download_a_book(book_name: string) { //get request
-    ///download_book?book_name=FALL2019.PNG
-    return this.http.get("http://127.0.0.1:5000/download_book?book_name=FALL2019.PNG",{ responseType: "blob" });
+    return this.http.get(this.rootUrl +"download_book?book_name="+book_name,{ responseType: "blob"});
   }
 
   add_a_book(fileToUpload : File) { // post request
