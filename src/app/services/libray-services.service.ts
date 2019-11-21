@@ -5,13 +5,9 @@ import { HttpClient } from "@angular/common/http";
   providedIn: "root"
 })
 export class LibrayServicesService {
-  //readonly rootUrl = "https://back-end-258822.appspot.com/";
-  constructor(private http: HttpClient) {}
 
-  // welcomeMessage() {
-  //   // get request
-  //   return this.http.get();
-  // }
+
+  constructor(private http: HttpClient) {}
 
   get_booklist() {
     // get request
@@ -21,6 +17,10 @@ export class LibrayServicesService {
   search_a_book(book_name: string) {
     //get request
     return this.http.get("search?book_name=" + book_name);
+  }
+
+  download_a_book(book_name: string) { //get request
+    return this.http.get("download_book?book_name="+book_name,{ responseType: "blob"});
   }
 
   add_a_book(fileToUpload: File) {

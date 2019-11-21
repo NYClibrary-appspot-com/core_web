@@ -13,7 +13,7 @@ export class loadblancer implements HttpInterceptor {
   pendingRequestsCount = 0;
 
   readonly rootUrl = "https://back-end-258822.appspot.com/";
-  readonly secondUrl = "www.google.com";
+  readonly secondUrl = "https://pyback.appspot.com/"
   intercept(
     request: HttpRequest<any>,
     next: HttpHandler
