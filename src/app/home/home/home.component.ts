@@ -49,14 +49,20 @@ export class HomeComponent implements OnInit {
         if (data.error) {
           // alert(data.error);
           this.error_me =data.error
+          this.book_name = null;
+          this.searched_b = null;
         } else {
           if (data.success) {
             // it will be implemented, if user search with actual book_name
-            this.book_name = data;
+            this.book_name = data.book_name;
+            this.error_me =null;
+            this.searched_b = null;
             // console.log(this.book_name);
           } else {
             // it will be implemented, if user search with pre-fix of book_name
             this.searched_b = data;
+            this.book_name = null;
+            this.error_me =null;
             // console.log(this.searched_b);
           }
         }
