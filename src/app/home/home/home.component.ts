@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   book_name: string = null;
   book_list: [] = null;
   welcome: string = null;
+  error_me: string=null;
 
   constructor(
     private router: Router,
@@ -46,21 +47,22 @@ export class HomeComponent implements OnInit {
       this.libService.search_a_book(book_name).subscribe((data: any) => {
         // console.log(data);
         if (data.error) {
-          alert(data.error);
+          // alert(data.error);
+          this.error_me =data.error
         } else {
           if (data.success) {
             // it will be implemented, if user search with actual book_name
             this.book_name = data;
-            console.log(this.book_name);
+            // console.log(this.book_name);
           } else {
             // it will be implemented, if user search with pre-fix of book_name
             this.searched_b = data;
-            console.log(this.searched_b);
+            // console.log(this.searched_b);
           }
         }
       });
     } else {
-      alert("null value is not exceptable");
+      this.error_me = "null value is not exceptable";
     }
   }
 
