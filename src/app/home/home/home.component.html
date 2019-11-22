@@ -1,40 +1,32 @@
-<div>
 
-  <form #bookTag="ngForm" (ngSubmit)="searchBook(bookTag.value)">
-    <input type="text" name="book_name" placeholder="Enter book name" ngModel />
-    <input id="bookSearchButton" class="mybutton" type="submit" value="submit" />
-    <br />
-  </form>
+<div class="form">
+    <form #bookTag="ngForm" (ngSubmit)="searchBook(bookTag.value)">
+      <input type="text" name="book_name" placeholder="Enter book name" ngModel />
+    </form>
+</div>  
 
+<p>Some available books of our library: </p>
+<div *ngIf="book_list != null">
+    <!-- use a for loop here to display all books
+    -->
+      <p> 
+        {{book_list[0]}}  <button (click)=download_a_book(book_list[0]) class="fa fa-download"></button>
+    </p>
+    <p> 
+        {{book_list[1]}}  <button (click)=download_a_book(book_list[1]) class="fa fa-download"></button>
+    </p>
+    <p> 
+          {{book_list[2]}} <button (click)=download_a_book(book_list[2]) class="fa fa-download"></button>
+    </p>
+    <p> 
+        {{book_list[3]}} <button (click)=download_a_book(book_list[3]) class="fa fa-download"></button>
+    </p>
+    <p> 
+        {{book_list[4]}} <button (click)=download_a_book(book_list[4]) class="fa fa-download"></button>
+    </p>
+      
 </div>
-
-
-
-
-  <p>Some available books of our library: </p>
-  <div *ngIf="book_list != null">
-      <!-- use a for loop here to display all books
-     -->
-       <p> 
-          <button (click)=download_a_book(book_list[0])> {{book_list[0]}} </button>
-      </p>
-      <p> 
-          <button (click)=download_a_book(book_list[1])> {{book_list[1]}} </button>
-      </p>
-      <p> 
-          <button (click)=download_a_book(book_list[2])> {{book_list[2]}}</button>
-      </p>
-      <p> 
-          <button (click)=download_a_book(book_list[3])> {{book_list[3]}}</button>
-      </p>
-      <p> 
-          <button (click)=download_a_book(book_list[4])> {{book_list[4]}}</button>
-      </p>
-       
-  </div>
   
-
-
 
 <div class="add-book-button">
   <a mat-fab color="primary" (click)="addBook()" style="margin-right: 14px">
