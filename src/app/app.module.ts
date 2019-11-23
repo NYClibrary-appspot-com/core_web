@@ -43,7 +43,6 @@ import { NavbarComponent } from './navbar/navbar.component';
   declarations: [
     AppComponent,
     NavbarComponent
-    
   ],
   imports: [
     BrowserModule,

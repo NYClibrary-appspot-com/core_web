@@ -1,8 +1,8 @@
 import {  HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BookListComponent } from './book-list/book-list.component';
 import { AddBookComponent } from './add-book/add-book.component';
+import { AboutComponent } from './about/about.component';
 
 /**
 * @author Tushar Malakar
@@ -26,8 +26,8 @@ const routes: Routes = [
       component: AddBookComponent 
     },
     {
-      path: 'bookList',
-      component: BookListComponent 
+      path: 'about',
+      component: AboutComponent
     }
   ];
 
