@@ -22,7 +22,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatTableModule } from '@angular/material/table';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import {MatSelectModule} from '@angular/material/select';
-import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialogModule, MatDialog} from '@angular/material/dialog';
 
 //Angular Flex Module
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -35,6 +35,9 @@ import { MatCardModule } from '@angular/material/card';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { LibrayServicesService } from './services/libray-services.service';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MaterialModule } from './material/material.module';
+import { AddBookComponent } from './home/add-book/add-book.component';
+import { DialogPopUpComponent } from './home/dialogPopUp/dialogPopUp.component';
 
 
 
@@ -42,7 +45,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    DialogPopUpComponent
     
   ],
   imports: [
@@ -69,7 +73,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatDialogModule,
     MatListModule,
     MatCardModule,
-    
+    MaterialModule,
+    MatDialogModule,
     
 
     //Our Routes will be here to make code cleaner
@@ -92,6 +97,8 @@ import { NavbarComponent } from './navbar/navbar.component';
       }
     
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[DialogPopUpComponent]
+  
 })
 export class AppModule { }

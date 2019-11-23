@@ -3,6 +3,10 @@ import { FormGroup } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
 import { LibrayServicesService } from "src/app/services/libray-services.service";
 import { saveAs } from "file-saver";
+import { MatDialogModule, MatDialog } from '@angular/material';
+import { MatDialogConfig } from '@angular/material'
+import { AddBookComponent } from '../add-book/add-book.component';
+import { DialogPopUpComponent } from 'src/app/home/dialogPopUp/dialogPopUp.component';
 
 @Component({
   selector: "app-home",
@@ -18,7 +22,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private libService: LibrayServicesService
+    private libService: LibrayServicesService,
+    private dialog: MatDialog
   ) {}
 
   ngOnInit() {
@@ -65,6 +70,19 @@ export class HomeComponent implements OnInit {
   }
 
   addBook() {
-    this.router.navigate(["/home/addBook"]);
+    
+    //this.router.navigate(["/home/addBook"]);
+
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true; 
+    dialogConfig.autoFocus = true;
+    // dialogConfig.width = "60%"
+    // dialogConfig.position = {
+    //   'top': '0',
+    //   'right': '0'
+    // }
+
+    this.dialog.open(DialogPopUpComponent, dialogConfig);
   }
 }
