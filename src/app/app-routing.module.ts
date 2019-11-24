@@ -16,7 +16,7 @@ import { Routes, RouterModule, CanActivate } from '@angular/router';
 */
 const routes: Routes = [
   {
-    path : 'home', 
+    path : '', 
     loadChildren : './home/home.module#HomeModule',
   },
   //default component

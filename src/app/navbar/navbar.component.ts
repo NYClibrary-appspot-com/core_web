@@ -14,15 +14,15 @@ export class NavbarComponent implements OnInit {
   }
 
   GoToHomePage(){
-    this.router.navigate(['/home'])
+    this.router.navigate([''])
   }
 
   api(){
-    this.router.navigate(['/home'])
+    this.router.navigate([''])
   }
 
   about(){
-    this.router.navigate(['/home/about'])
+    this.router.navigate(['/about'])
   }
   
 

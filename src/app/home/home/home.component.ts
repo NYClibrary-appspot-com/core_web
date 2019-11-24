@@ -73,6 +73,6 @@ export class HomeComponent implements OnInit {
   }
 
   addBook() {
-    this.router.navigate(["/home/addBook"]);
+    this.router.navigate(["/addBook"]);
   }
 }
