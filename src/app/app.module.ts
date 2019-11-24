@@ -97,8 +97,12 @@ import { DialogPopUpComponent } from './home/dialogPopUp/dialogPopUp.component';
       }
     
   ],
-  bootstrap: [AppComponent],
-  entryComponents:[DialogPopUpComponent]
+  bootstrap: [
+    AppComponent
+  ],
+  entryComponents:[
+    DialogPopUpComponent
+  ]
   
 })
 export class AppModule { }

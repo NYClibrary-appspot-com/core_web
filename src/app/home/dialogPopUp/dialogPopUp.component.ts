@@ -39,11 +39,11 @@ export class DialogPopUpComponent implements OnInit {
           this.upload_mess = data.success;
           alert(this.upload_mess);  
         })
-        //this.router.navigate(['/home']);
+        
     }
     else{
       alert("null value is not exceptable")
-      //this.router.navigate(['/home']);
+      
     }
   }
 
