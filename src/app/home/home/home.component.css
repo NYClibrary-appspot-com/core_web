@@ -1,5 +1,52 @@
+<<<<<<< HEAD
 input[type=text], select {
   width: 100%;
+=======
+p {
+  padding: 16px;
+  text-align: center;
+}
+
+.background{
+  height: 100vh;
+  width: 100%;
+  background: url('https://images.pexels.com/photos/1563564/pexels-photo-1563564.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.book {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.mat-card-cvr{ 
+  top:50%; 
+  width:100%; text-align:center; 
+  position:fixed; 
+}
+
+.add-book-button {
+  z-index: 5;
+  position: fixed;
+  display: flex;
+  align-self: flex-end;
+  bottom: 7%;
+  margin-bottom: 5px;
+  margin-left: 80%;
+}
+
+input[type="text"] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 50px 500px;
+  display: inline-block;
+  border: 1px solid #b3a9a9;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+>>>>>>> origin/ali-front-end
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -8,9 +55,23 @@ input[type=text], select {
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 input[type=submit] {
   width: 100%;
   background-color: #4CAF50;
+=======
+#bookSearchButton {
+  margin: 8px -500px;
+  background-color: #B92E10;
+  color: white;
+  border: 2px solid #555555;
+  border-radius: 8px;
+  -webkit-transition-duration: 0.4s;
+}
+
+#bookSearchButton:hover {
+  background-color: royalblue;
+>>>>>>> origin/ali-front-end
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -49,4 +110,8 @@ p {
   float: right;
   cursor: pointer;
   margin-left: 10%;
+<<<<<<< HEAD
 } */
+=======
+}
+>>>>>>> origin/ali-front-end

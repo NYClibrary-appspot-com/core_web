@@ -26,9 +26,13 @@
     "@types/cordova-plugin-network-information": "^1.3.2",
     "angular-material": "^1.1.18",
     "core-js": "^2.5.4",
+<<<<<<< HEAD
     "cors": "^2.8.5",
     "downloads-folder": "^1.0.1",
     "file-saver": "^2.0.2",
+=======
+    "downloads-folder": "^1.0.2",
+>>>>>>> origin/ali-front-end
     "hammerjs": "^2.0.8",
     "mongodb": "^3.3.4",
     "ng-modules": "^3.0.5",

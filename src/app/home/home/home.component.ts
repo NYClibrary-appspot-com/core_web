@@ -11,20 +11,46 @@ import { saveAs } from "file-saver";
 })
 export class HomeComponent implements OnInit {
   //default variables .
+<<<<<<< HEAD
   searched_b: [] = null;
   book_name: string = null;
   book_list: [] = null;
   welcome: string = null;
   error_me: string=null;
+=======
+  fileToUpload: File = null;
+  book_name: string = null;
+  book_list: [] = null;
+  list: [] = null;
+  welcome: {} = null;
+  formdata: FormGroup = null;
+  upload_mess: string = null;
+>>>>>>> origin/ali-front-end
 
   constructor(
     private router: Router,
     private libService: LibrayServicesService
   ) {}
+<<<<<<< HEAD
 
   ngOnInit() {
     this.bookList();
   }
+=======
+
+  ngOnInit() {
+    this.formdata = new FormGroup({});
+    this.bookList();
+  }
+
+  // welcome message from server
+  // welocome() {
+  //   this.libService.welcomeMessage().subscribe((data: any) => {
+  //     this.welcome = data;
+  //     console.log(this.welcome);
+  //   });
+  // }
+>>>>>>> origin/ali-front-end
 
   // find all the books of library
   bookList() {
@@ -34,6 +60,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
+<<<<<<< HEAD
   download_a_book(book_name: string) {
     console.log(book_name);
     this.libService.download_a_book(book_name).subscribe((data: any) => {
@@ -41,6 +68,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
+=======
+>>>>>>> origin/ali-front-end
   // search a book by book name
   searchBook(book_name: string) {
     if (book_name != null) {
@@ -72,7 +101,31 @@ export class HomeComponent implements OnInit {
     }
   }
 
+<<<<<<< HEAD
   addBook() {
     this.router.navigate(["/addBook"]);
   }
+=======
+  // take the file from file list
+  handleFileInput(files: FileList) {
+    this.fileToUpload = files.item(0);
+  }
+
+  // upload the retrived file from file list
+  uploadFileToActivity(file: any) {
+    this.libService.add_a_book(this.fileToUpload).subscribe((data: any) => {
+      this.upload_mess = data.success;
+      console.log(this.upload_mess);
+    });
+  }
+
+  addBook() {
+    this.router.navigate(["/home/addBook"]);
+  }
+
+  // get_book_list() {
+  //   this.list = this.book_list;
+  //   return this.list;
+  // }
+>>>>>>> origin/ali-front-end
 }
