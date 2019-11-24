@@ -1,3 +1,4 @@
+import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
@@ -22,6 +23,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     HomeRoutingModule,
     ReactiveFormsModule,
 
+
     //Angular Material
     MatTabsModule,
     MatCardModule,
@@ -30,8 +32,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatInputModule,
     FormsModule,
     FlexLayoutModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDialogModule
     
+  ],
+  providers:[
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
   ]
 })
 export class HomeModule {}
