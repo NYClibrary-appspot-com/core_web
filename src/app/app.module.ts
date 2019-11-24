@@ -83,7 +83,7 @@ import { NavbarComponent } from './navbar/navbar.component';
    
   ],
   providers: [
-    LibrayServicesService,
+    LibrayServicesService
     
       {
         provide :HTTP_INTERCEPTORS,
