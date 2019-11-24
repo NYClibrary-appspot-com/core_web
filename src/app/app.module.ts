@@ -73,7 +73,7 @@ import { loadblancer } from "./proxy/loadblancer";
   providers: [
     LibrayServicesService,
     { provide: HTTP_INTERCEPTORS, useClass: loadblancer, multi: true }
-  ],
+  ], 
   bootstrap: [AppComponent]
 })
 export class AppModule {}
