@@ -12,6 +12,7 @@ import { AddBookComponent } from "./add-book/add-book.component";
 import { FormsModule } from "@angular/forms";
 import { AboutComponent } from './about/about.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatInputModule,
     FormsModule,
     FlexLayoutModule,
+    MatToolbarModule
     
   ]
 })

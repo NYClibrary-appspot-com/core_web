@@ -1,7 +1,27 @@
-.avatar {
+.box.avatar {
     vertical-align: middle;
     width: 40px;
     height: 40px;
     border-radius: 40%;
   }
 
+  .box {
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 50px solid white;
+  }
+  .one {
+    flex: 1;
+  }
+
+  .two {
+    flex: 1;
+  }
+
+  .three {
+    flex: 1;
+  }
+  .four {
+    flex: 1;
+  }
+  
