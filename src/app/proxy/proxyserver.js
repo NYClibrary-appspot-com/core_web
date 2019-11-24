@@ -1,4 +1,4 @@
-// work
+
 var MongoClient = require("mongodb").MongoClient;
 const uri = "mongodb+srv://user:Z3DFTdw8CUEarXkw@cluster0-vdmwi.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
