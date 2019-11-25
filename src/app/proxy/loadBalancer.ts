@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import {proCollection} from "./DbClient";
 import {
 HttpRequest,
   HttpHandler,
@@ -27,7 +27,7 @@ export class loadBalancer implements HttpInterceptor {
     // return next.handle(duplicateUrl);
 
 
-   
+    // console.log(proCollection)
     console.log(request.url)
     return next.handle(request)
 
