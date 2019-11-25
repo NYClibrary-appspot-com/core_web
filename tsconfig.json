@@ -1,20 +1,51 @@
+// {
+//   "compileOnSave": false,
+  
+//   "compilerOptions": {
+//     "baseUrl": ".",
+//     "moduleResolution": "node",
+//     "emitDecoratorMetadata": true,
+//     "experimentalDecorators": true,
+
+//     "target": "es5",
+//     "typeRoots": ["node_modules/@types"],
+//     "lib": ["es2016","dom"],
+
+//     // "outDir": "./dist/out-tsc",
+//     // "sourceMap": true,
+//     // "declaration": false,
+
+//     // "module": "es2015",
+    
+    
+//     // "importHelpers": true,
+//   }
+//   ,
+//   "files": "./config/protractor.config.ts"
+
+
+// }
+
+
 {
-  "compilerOptions": {
-      "target": "es6",
-      "module": "es2015",
-      "moduleResolution": "node",
-      "sourceMap": true,
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "removeComments": false,
-      "noImplicitAny": false,
-      "suppressImplicitAnyIndexErrors": false,
-      "declaration": false
-  },
   "compileOnSave": false,
-  "buildOnSave": false,
-  "exclude": [
-      "node_modules",
-      "typings"
-  ]
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  }
 }
