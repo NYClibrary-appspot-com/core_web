@@ -14,6 +14,11 @@ p {
   position:fixed; 
 }
 
+.styleTB {
+  border: 1px solid #cccccc;
+  padding: 5px;
+}
+
 .add-book-button {
   z-index: 5;
   position: fixed;

@@ -12,9 +12,16 @@
 
 
   <p>Some available books of our library: </p>
+
+
+
   <div *ngIf="book_list != null" class="mat-body-2">
       <!-- use a for loop here to display all books
      -->
+     <tbody id="tableData" class="styleTB">
+
+
+     </tbody>
        <p> 
           <button (click)=download_a_book(book_list[0])> {{book_list[0]}} </button>
       </p>
