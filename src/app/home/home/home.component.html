@@ -1,76 +1,41 @@
-<div class="form">
+<div class="background">
+  <div>
   <form #bookTag="ngForm" (ngSubmit)="searchBook(bookTag.value)">
-    <input type="text" name="book_name" placeholder="Search a book" ngModel />
-  
-  <!-- <button class="search">
-    <mat-icon>search</mat-icon>
-  </button> -->
-
+    <input type="text" name="book_name" placeholder="Enter book name" ngModel />
+    <input id="bookSearchButton" class="mybutton" type="submit" value="submit" />
+    <br />
   </form>
-</div>  
-
-
-
-
-<div>
-
-  <div *ngIf= "error_me != null">
-     <p>{{error_me}}</p>
-  </div>
-    
-  <div *ngIf= "error_me == null">
-      <div *ngIf= "book_name != null">
-          <p> Your searched book :</p>
-          <p> 
-              {{book_name}}  <button (click)=download_a_book(book_list[0]) class="fa fa-download"></button>
-          </p>
-        </div>
-  
-  
-        <div *ngIf= "searched_b != null">
-              <p> Suggested book :</p>
-  
-              <!-- <tr *ngFor="let book of searched_b>
-                  <td></td>
-              </tr>
-                -->
-              <p> 
-                  {{searched_b[0]}}  <button (click)=download_a_book(searched_b[0]) class="fa fa-download"></button>
-              </p>
-              <!-- <p> 
-                  {{searched_b[1]}}  <button (click)=download_a_book(searched_b[1]) class="fa fa-download"></button>
-              </p> -->
-        </div>
-  </div>
-
-
-    <div *ngIf="book_list != null">
-          <p>Some available books of our library: </p>
-          <!-- use a for loop here to display all books
-          -->
-          <p> 
-              {{book_list[0]}}  <button (click)=download_a_book(book_list[0]) class="fa fa-download"></button>
-          </p>
-          <p> 
-              {{book_list[1]}}  <button (click)=download_a_book(book_list[1]) class="fa fa-download"></button>
-          </p>
-          <p> 
-                {{book_list[2]}} <button (click)=download_a_book(book_list[2]) class="fa fa-download"></button>
-          </p>
-          <p> 
-              {{book_list[3]}} <button (click)=download_a_book(book_list[3]) class="fa fa-download"></button>
-          </p>
-          <p> 
-              {{book_list[4]}} <button (click)=download_a_book(book_list[4]) class="fa fa-download"></button>
-          </p>       
-    </div>
 </div>
 
 
+<div style="color: black">
+<h2><p>Some available books of our library: </p></h2>
+</div>
+  <div *ngIf="book_list != null">
+      <!-- use a for loop here to display all books
+     -->
+       <p>
+          <button (click)=download_a_book(book_list[0])> {{book_list[0]}} </button>
+      </p>
+      <p>
+          <button (click)=download_a_book(book_list[1])> {{book_list[1]}} </button>
+      </p>
+      <p>
+          <button (click)=download_a_book(book_list[2])> {{book_list[2]}}</button>
+      </p>
+      <p>
+          <button (click)=download_a_book(book_list[3])> {{book_list[3]}}</button>
+      </p>
+      <p>
+          <button (click)=download_a_book(book_list[4])> {{book_list[4]}}</button>
+      </p>
+  </div>
 
 
 <div class="add-book-button">
   <a mat-fab color="primary" (click)="addBook()" style="margin-right: 14px">
     <mat-icon>add</mat-icon>
   </a>
+</div>
+
 </div>
