@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { loadBalancer } from './proxy/loadBalancer';
+=======
+>>>>>>> b73d52c58d43addb6c3766f930a0749262158785
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 //Declares our routing
@@ -48,6 +51,7 @@ import { MatCardModule } from "@angular/material/card";
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { LibrayServicesService } from './services/libray-services.service';
 import { NavbarComponent } from './navbar/navbar.component';
+import { loadBalancer } from './proxy/loadBalancer';
 
 
 

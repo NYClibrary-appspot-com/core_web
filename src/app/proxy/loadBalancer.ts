@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import {
 HttpRequest,
   HttpHandler,
@@ -16,18 +15,12 @@ export class loadBalancer implements HttpInterceptor {
   readonly rootUrl = "https://back-end-258822.appspot.com/";
   readonly secondUrl = "https://dummy.com/";
   
-  // uri = "mongodb+srv://user:Z3DFTdw8CUEarXkw@cluster0-vdmwi.mongodb.net/test?retryWrites=true&w=majority";
-  // client = new MongoClient(this.uri, { useNewUrlParser: true });
-  // proxyDB = this.client.db("csciCloud").collection("proxyDB");
-   
-  
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     
     // const duplicateUrl = request.clone({ url : this.rootUrl + request.url });
     // return next.handle(duplicateUrl);
 
 
-   
     console.log(request.url)
     return next.handle(request)
 

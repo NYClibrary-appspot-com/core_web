@@ -1,7 +1,7 @@
 import { Router } from "@angular/router";
 import { FormGroup } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
-import { LibrayServicesService } from "src/app/services/libray-services.service";
+import { LibrayServicesService } from '../../services/libray-services.service';
 import { saveAs } from "file-saver";
 
 @Component({
