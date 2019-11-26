@@ -35,6 +35,7 @@ import { MatCardModule } from '@angular/material/card';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { LibrayServicesService } from './services/libray-services.service';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AddnewbookComponent } from './home/addnewbook/addnewbook.component';
 
 
 
@@ -42,7 +43,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddnewbookComponent
   ],
   imports: [
     BrowserModule,
@@ -85,6 +87,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     LibrayServicesService,
   
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AddnewbookComponent]
 })
 export class AppModule { }
