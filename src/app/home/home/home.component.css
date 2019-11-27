@@ -42,6 +42,33 @@ p {
   margin-left: 80%;
 }
 
+.listImage {
+  background-image: url("https://i.postimg.cc/j22QP8Y8/library.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+.bookBorder {
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 2px solid rgb(197, 190, 190);
+  border-radius: 8px;
+  background: rgba(255, 248, 220, 0.637);
+}
+
+.blist {
+  list-style-position: inside;
+
+  margin-top: 6px;
+  margin-bottom: 6px;
+  
+  text-align: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  
+}
+
 /* .search {
   position: relative;
   text-align: center;

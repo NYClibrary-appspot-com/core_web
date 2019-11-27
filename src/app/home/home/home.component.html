@@ -45,26 +45,15 @@
 
 
     <div *ngIf="book_list != null">
-          <p>Some available books of our library: </p>
-          <!-- use a for loop here to display all books
-          -->
-          <p>
-              {{book_list[0]}}  <button (click)=download_a_book(book_list[0]) class="fa fa-download"></button>
-          </p>
-          <p>
-              {{book_list[1]}}  <button (click)=download_a_book(book_list[1]) class="fa fa-download"></button>
-          </p>
-          <p>
-                {{book_list[2]}} <button (click)=download_a_book(book_list[2]) class="fa fa-download"></button>
-          </p>
-          <p>
-              {{book_list[3]}} <button (click)=download_a_book(book_list[3]) class="fa fa-download"></button>
-          </p>
-          <p>
-              {{book_list[4]}} <button (click)=download_a_book(book_list[4]) class="fa fa-download"></button>
-          </p>
+          <h2><p> Available Books in our Library: </p></h2>
+       <section class="bookBorder"> 
+         <h3 *ngFor="let book of book_list; let i = index" class="blist">
+              {{book}}  <button (click)=download_a_book(book_list[i]) class="fa fa-download"></button>    
+         </h3>
+        
+        </section>
     </div>
-</div>
+
 
 
 
