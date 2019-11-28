@@ -1,6 +1,6 @@
-<div class="form">
+<div class="box">
   <form #bookTag="ngForm" (ngSubmit)="searchBook(bookTag.value)">
-    <input type="text" name="book_name" placeholder="Search a book" ngModel />
+    <input type="search" id="search" name="book_name" placeholder="Search a book" ngModel />
      <input id="bookSearchButton" type="submit" value="submit" />
   <!-- <button class="search">
     <mat-icon>search</mat-icon>
