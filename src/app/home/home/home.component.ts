@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
   bookList() {
     this.libService.get_booklist().subscribe((data: any) => {
       this.book_list = data;
-
+      
 
       
       // console.log(this.book_list);
@@ -86,7 +86,7 @@ export class HomeComponent implements OnInit {
 
     dialogConfig.disableClose = true; 
     dialogConfig.autoFocus = true;
-  
+
     this.dialog.open(AddnewbookComponent, dialogConfig);
   }
 }
