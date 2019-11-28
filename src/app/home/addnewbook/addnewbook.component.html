@@ -1,0 +1,19 @@
+<h2 mat-dialog-title style="text-align: center;">Add a Book to NYC Library</h2>
+
+<mat-dialog-content>The file to be uploaded must be in pdf, epub, mobi, or azw book formats.</mat-dialog-content>
+<br>
+
+<mat-dialog-content>
+  
+    <div class="uploadPic">
+        <input  type="file" class="hide_file" (change)="handleFileInput($event.target.files)">
+    </div>
+ 
+</mat-dialog-content>
+<br>
+<mat-dialog-actions>
+    
+    <button class="mat-raised-button mat-primary"(click)="uploadFileToActivity()" mat-dialog-close>Submit</button>
+    <button class="mat-raised-button" mat-dialog-close>Cancel</button>
+    
+</mat-dialog-actions>

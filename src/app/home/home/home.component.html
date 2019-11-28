@@ -1,6 +1,11 @@
-<div class="form">
+<div class="box">
   <form #bookTag="ngForm" (ngSubmit)="searchBook(bookTag.value)">
-    <input type="text" name="book_name" placeholder="Search a book" ngModel />
+    <input type="search" id="search" name="book_name" placeholder="Search a book" ngModel />
+     <input id="bookSearchButton" type="submit" value="submit" />
+  <!-- <button class="search">
+    <mat-icon>search</mat-icon>
+  </button> -->
+
   </form>
 </div>
 
@@ -40,26 +45,15 @@
 
 
     <div *ngIf="book_list != null">
-          <p>Some available books of our library: </p>
-          <!-- use a for loop here to display all books
-          -->
-          <p>
-              {{book_list[0]}}  <button (click)=download_a_book(book_list[0]) class="fa fa-download"></button>
-          </p>
-          <p>
-              {{book_list[1]}}  <button (click)=download_a_book(book_list[1]) class="fa fa-download"></button>
-          </p>
-          <p>
-                {{book_list[2]}} <button (click)=download_a_book(book_list[2]) class="fa fa-download"></button>
-          </p>
-          <p>
-              {{book_list[3]}} <button (click)=download_a_book(book_list[3]) class="fa fa-download"></button>
-          </p>
-          <p>
-              {{book_list[4]}} <button (click)=download_a_book(book_list[4]) class="fa fa-download"></button>
-          </p>
+          <h2><p> Available Books in our Library: </p></h2>
+       <section class="bookBorder"> 
+         <h3 *ngFor="let number of [0,1,2,3,4]" class="blist">
+              {{book_list[number]}}  <button (click)=download_a_book(book_list[number]) class="fa fa-download"></button>    
+         </h3>
+        
+        </section>
     </div>
-</div>
+
 
 
 

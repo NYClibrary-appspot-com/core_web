@@ -9,7 +9,7 @@ export class LibrayServicesService {
   
                     // "https://back-end-258822.appspot.com/"
                     // "https://pyback.appspot.com/"
-  readonly rootUrl = "https://pyback.appspot.com/";
+  readonly rootUrl = "http://34.70.221.226/";
   constructor(private http: HttpClient) {}
 
 

@@ -1,19 +1,9 @@
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
 
 input[type=submit] {
-  width: 100%;
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  display: inline-block;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -43,6 +33,36 @@ p {
   margin-left: 80%;
 }
 
+
+
+
+.listImage {
+  background-image: url("https://i.postimg.cc/j22QP8Y8/library.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+.bookBorder {
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 2px solid rgb(197, 190, 190);
+  border-radius: 8px;
+  background: rgba(255, 248, 220, 0.637);
+}
+
+.blist {
+  list-style-position: inside;
+
+  margin-top: 6px;
+  margin-bottom: 6px;
+  
+  text-align: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  
+}
+
 /* .search {
   position: relative;
   text-align: center;
@@ -50,3 +70,33 @@ p {
   cursor: pointer;
   margin-left: 10%;
 } */
+
+
+#bookSearchButton {
+  /* margin-right:50px; */
+  flex: 1;
+  background-color: #B92E10;
+  color: white;
+  border: 2px solid #555555;
+  border-radius: 8px;
+  
+}
+
+
+#bookSearchButton:hover {
+  background-color: royalblue;
+  color: white;
+}
+
+.box { 
+  margin: 20px auto;
+  width: 100%;
+  /* max-width: 150px; */
+  height: 40px; 
+  text-align: center; 
+}
+
+#search{
+  width: 40%;
+  padding: 14px 20px;
+}
