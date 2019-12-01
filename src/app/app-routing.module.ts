@@ -22,7 +22,7 @@ const routes: Routes = [
   //default component
   {
     path:'**', 
-    redirectTo: 'home',
+    redirectTo: '',
     pathMatch: 'full'
   }
 ];

@@ -18,6 +18,11 @@ input[type=submit]:hover {
   padding: 50px;
 }
 
+middle {
+  border-radius: 5px;
+  padding: 50px;
+}
+
 p {
   padding: 16px;
   text-align: center;
