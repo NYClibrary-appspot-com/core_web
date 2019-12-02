@@ -18,10 +18,6 @@ input[type=submit]:hover {
   padding: 50px;
 }
 
-middle {
-  border-radius: 5px;
-  padding: 50px;
-}
 
 p {
   padding: 16px;
@@ -53,28 +49,22 @@ p {
   margin-right: 5px;
   border: 2px solid rgb(197, 190, 190);
   border-radius: 8px;
-  background: rgba(255, 248, 220, 0.637);
 }
 
 .blist {
-  list-style-position: inside;
+  /* list-style-position: inside;
 
   margin-top: 6px;
   margin-bottom: 6px;
   
-  text-align: center;
+  
   padding-top: 6px;
-  padding-bottom: 6px;
+  padding-bottom: 6px; */
+  
+  text-align: center;
+  border-radius: 4px;
   
 }
-
-/* .search {
-  position: relative;
-  text-align: center;
-  float: right;
-  cursor: pointer;
-  margin-left: 10%;
-} */
 
 
 #bookSearchButton {

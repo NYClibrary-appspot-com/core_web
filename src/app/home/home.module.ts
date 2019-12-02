@@ -13,10 +13,11 @@ import { FormsModule } from "@angular/forms";
 import { AboutComponent } from './about/about.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { AddnewbookComponent } from './addnewbook/addnewbook.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent],
+  declarations: [HomeComponent, AboutComponent, AddnewbookComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
