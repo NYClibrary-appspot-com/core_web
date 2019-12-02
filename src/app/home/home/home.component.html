@@ -30,29 +30,26 @@
         <div *ngIf= "searched_b != null">
               <p> Suggested book :</p>
 
-              <!-- <tr *ngFor="let book of searched_b>
-                  <td></td>
-              </tr>
-                -->
-              <p>
-                  {{searched_b[0]}}  <button (click)=download_a_book(searched_b[0]) class="fa fa-download"></button>
-              </p>
-              <!-- <p>
-                  {{searched_b[1]}}  <button (click)=download_a_book(searched_b[1]) class="fa fa-download"></button>
-              </p> -->
+              <div *ngFor="let number of searched_b;">
+                <p>
+                    {{number}}  <button (click)=download_a_book(number) class="fa fa-download"></button>
+                </p>
+                  
+             </div>
+
         </div>
   </div>
 
 
-    <div *ngIf="book_list != null">
-          <h2><p> Available Books in our Library: </p></h2>
-       <section class="bookBorder"> 
-         <h3 *ngFor="let number of [0,1,2,3,4]" class="blist">
-              {{book_list[number]}}  <button (click)=download_a_book(book_list[number]) class="fa fa-download"></button>    
-         </h3>
-        
-        </section>
-    </div>
+<div *ngIf="book_list != null">
+      <h2><p> Available Books in our Library: </p></h2>
+    <section class="bookBorder"> 
+      <h3 *ngFor="let number of [0,1,2,3,4]" class="blist">
+          {{book_list[number]}}  <button (click)=download_a_book(book_list[number]) class="fa fa-download"></button>    
+      </h3>
+    
+    </section>
+</div>
 
 
 
