@@ -59,21 +59,12 @@ p {
   
 }
 
-/* .search {
-  position: relative;
-  text-align: center;
-  float: right;
-  cursor: pointer;
-  margin-left: 10%;
-} */
-
-
 #bookSearchButton {
   /* margin-right:50px; */
   flex: 1;
-  background-color: #B92E10;
+  background-color: rgb(60, 50, 205);
   color: white;
-  border: 2px solid #555555;
+  border: 2px solid #9ACD32;
   border-radius: 8px;
   
 }
@@ -87,7 +78,6 @@ p {
 .box { 
   margin: 20px auto;
   width: 100%;
-  /* max-width: 150px; */
   height: 40px; 
   text-align: center; 
 }
@@ -95,4 +85,17 @@ p {
 #search{
   width: 40%;
   padding: 14px 20px;
+}
+
+.backGround {
+  /* The image used */
+  background-image: url('src/assets/img/book.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

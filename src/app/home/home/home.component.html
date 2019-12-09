@@ -1,62 +1,57 @@
-<div class="box">
-  <form #bookTag="ngForm" (ngSubmit)="searchBook(bookTag.value)">
-    <input type="search" id="search" name="book_name" placeholder="Search a book" ngModel />
-     <input id="bookSearchButton" type="submit" value="submit" />
-  <!-- <button class="search">
-    <mat-icon>search</mat-icon>
-  </button> -->
+<div class="backGround">
 
-  </form>
-</div>
+      <div class="box">
+        <form #bookTag="ngForm" (ngSubmit)="searchBook(bookTag.value)">
+          <input type="search" id="search" name="book_name" placeholder="Search a book" ngModel />
+          <input id="bookSearchButton" type="submit" value="search" />
+        </form>
+      </div>
 
 
+      <div>
 
-
-<div>
-
-  <div *ngIf= "error_me != null">
-     <p>{{error_me}}</p>
-  </div>
-
-  <div *ngIf= "error_me == null">
-      <div *ngIf= "book_name != null">
-          <p> Your searched book :</p>
-          <p>
-              {{book_name}}  <button (click)=download_a_book(book_list[0]) class="fa fa-download"></button>
-          </p>
+        <div *ngIf= "error_me != null">
+          <p>{{error_me}}</p>
         </div>
 
-
-        <div *ngIf= "searched_b != null">
-              <p> Suggested book :</p>
-
-              <div *ngFor="let number of searched_b;">
+        <div *ngIf= "error_me == null">
+            <div *ngIf= "book_name != null">
+                <p> Your searched book :</p>
                 <p>
-                    {{number}}  <button (click)=download_a_book(number) class="fa fa-download"></button>
+                    {{book_name}}  <button (click)=download_a_book(book_list[0]) class="fa fa-download"></button>
                 </p>
-                  
-             </div>
+              </div>
 
+
+              <div *ngIf= "searched_b != null">
+                    <p> Suggested book :</p>
+
+                    <div *ngFor="let number of searched_b;">
+                      <p>
+                          {{number}}  <button (click)=download_a_book(number) class="fa fa-download"></button>
+                      </p>
+                        
+                  </div>
+
+              </div>
         </div>
-  </div>
 
 
-<div *ngIf="book_list != null">
-      <h2><p> Available Books in our Library: </p></h2>
-    <section class="bookBorder"> 
-      <h3 *ngFor="let number of [0,1,2,3,4]" class="blist">
-          {{book_list[number]}}  <button (click)=download_a_book(book_list[number]) class="fa fa-download"></button>    
-      </h3>
-    
-    </section>
-</div>
+      <div *ngIf="book_list != null" style="width: 70%; margin-left: auto;margin-right: auto; margin-bottom:0;">
+            <h2><p> Available Books in our Library: </p></h2>
+          <section class="bookBorder"> 
+            <h3 *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10]" class="blist">
+                {{book_list[number]}}  <button (click)=download_a_book(book_list[number]) class="fa fa-download"></button>    
+            </h3>
+          
+          </section>
+      </div>
 
 
+      <div class="add-book-button" >
+        <a mat-fab color="primary" (click)="addBook()" style="margin-right: 14px">
+          <mat-icon>add</mat-icon>
+        </a>
+      </div>
 
-
-
-<div class="add-book-button">
-  <a mat-fab color="primary" (click)="addBook()" style="margin-right: 14px">
-    <mat-icon>add</mat-icon>
-  </a>
 </div>
