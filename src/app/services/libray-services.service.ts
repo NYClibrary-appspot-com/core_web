@@ -22,6 +22,7 @@ export class LibrayServicesService {
   }
 
   download_a_book(book_name: string) { //get request
+    console.log(this.rootUrl +"download_book?book_name="+book_name)
     return this.http.get(this.rootUrl +"download_book?book_name="+book_name,{ responseType: "blob"});
   }
 
