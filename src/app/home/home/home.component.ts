@@ -44,7 +44,6 @@ export class HomeComponent implements OnInit {
   }
 
   download_a_book(book_name: string) {
-    console.log(book_name);
     this.libService.download_a_book(book_name).subscribe((data: any) => {
       saveAs(new File([data], book_name));
     });
