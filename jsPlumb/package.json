@@ -10,7 +10,7 @@
     "@angular/platform-browser": "5.0.0",
     "@angular/platform-browser-dynamic": "5.0.0",
     "@angular/router": "5.0.0",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.4.1",
     "core-js": "2.5.1",
     "jquery": "3.3.1",
     "jsplumb": "2.6.8",
