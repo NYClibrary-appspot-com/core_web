@@ -36,10 +36,6 @@ export class HomeComponent implements OnInit {
   bookList() {
     this.libService.get_booklist().subscribe((data: any) => {
       this.book_list = data;
-      
-
-      
-      // console.log(this.book_list);
     });
   }
 
